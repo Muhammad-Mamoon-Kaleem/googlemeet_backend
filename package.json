@@ -1,0 +1,26 @@
+{
+  "name": "realtime-communication",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "peerjs": "^1.5.4",
+    "redis": "^5.0.1",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.1.0",
+    "webrtc": "^1.14.1"
+  }
+}

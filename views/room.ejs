@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room <%= roomId %></title>  
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="video-grid"></div>
+    <div>
+        <input id="chatmessage" placeholder="Type message..."/>
+        <button id="sendButton">Send</button>
+        <div id="messages"></div>
+    </div>
+    <button id="muteButton">Mute</button>
+    <button id="videoButton">Stop Video</button>
+    <button id="shareScreen">Share Screen</button>
+
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+    <script  src="/room.js" defer></script>
+</body>
+</html>
