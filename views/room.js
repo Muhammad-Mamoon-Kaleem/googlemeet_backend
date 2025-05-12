@@ -50,7 +50,7 @@ socket.on('user-disconnected', userId => {
     }
 })
 
-// Add video stream 
+
 function addVideoStream(video, stream) {
     video.srcObject = stream;
     video.addEventListener('loadedmetadata', () => {
@@ -59,7 +59,7 @@ function addVideoStream(video, stream) {
     videoGrid.append(video);
 }
 
-// Connect to new user (caller side)
+
 function connectToNewUser(userId, stream) {
     console.log('Calling new user:', userId);
     const call = peer.call(userId, stream);
@@ -82,7 +82,7 @@ function connectToNewUser(userId, stream) {
     peers[userId] = call;
 }
 
-// Chat (example)
+
 document.getElementById('sendButton').addEventListener('click', () => {
     const msg = document.getElementById('chatmessage').value;
     socket.emit('message', msg);
@@ -117,7 +117,7 @@ document.getElementById('shareScreen').addEventListener('click', () => {
     }).then(screenStream => {
         const screenTrack = screenStream.getVideoTracks()[0];
 
-        // Replace local video
+        // Replacing video
         const myVideoTracks = myVideoStream.getVideoTracks();
         if (myVideoTracks.length > 0) {
             myVideo.srcObject = screenStream;
